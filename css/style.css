@@ -7,6 +7,7 @@
   --color-light-grey: #bac1b8;
   --color-warm-blue: #58a4b0;
   --color-green: #0c7c59;
+  --color-warm-red: #86323d;
 }
 
 * {
@@ -23,17 +24,29 @@ ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 40px;
 }
 
 li {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
-.right h2 {
-  margin-bottom: 15px;
+h1 {
+  font-size: 40px;
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+.right-title {
+  display: none;
+}
+.work-title {
+  text-align: left;
+}
+.slogan {
+  color: var(--color-yellow);
+  font-size: 30px;
 }
 
 .btn {
@@ -61,11 +74,14 @@ body {
   letter-spacing: 0.025em;
   scroll-behavior: smooth;
   background-color: var(--color-dark-grey);
+  font-family: Geneva, Verdana, Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
 
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/pest-control.jpg");
-  height: 27vh;
+  height: 263px;
   transition: height 2s ease;
   overflow: hidden;
   background-position: center center;
@@ -81,15 +97,23 @@ header img.logo {
   top: 0;
 }
 
+strong {
+  color: var(--color-yellow);
+}
+h2 {
+  line-height: 38px;
+}
+
 .container {
   max-width: 1300px;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 25px;
   padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .logo-wrapper {
-  max-width: 450px;
+  max-width: 400px;
   height: 225px;
   position: relative;
   overflow: hidden;
@@ -112,7 +136,6 @@ header img.logo {
   padding-right: 25px;
   margin-left: auto;
   margin-right: auto;
-  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -120,14 +143,11 @@ header img.logo {
 
 .left-wrapper {
   flex-shrink: 0;
-  height: fit-content;
   text-align: center;
 }
 .work {
-  padding: 0 10px 0 10px;
+  padding: 2px 15px 0 15px;
   flex-shrink: 0;
-  height: fit-content;
-  text-align: center;
   position: relative;
   color: var(--color-warm-white);
   background-color: var(--color-purple);
@@ -155,15 +175,24 @@ header img.logo {
   width: 100%;
   height: 40px;
 }
+.work h2 {
+  text-transform: uppercase;
+}
+.work p {
+  color: var(--color-dark-grey);
+}
 
 .contact {
-  margin-top: -30px;
+  margin-top: -40px;
   margin-left: 10px;
   margin-right: 10px;
   background-color: var(--color-warm-white);
   color: var(--color-black);
   position: relative;
-  padding-bottom: 25px;
+  padding-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2px;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -173,11 +202,11 @@ header img.logo {
   border-top-left-radius: 60% 100%;
   border-top-right-radius: 60% 100%;
   position: absolute;
-  top: -34%;
+  top: -19%;
   left: 0;
   width: 100%;
   background: white;
-  height: 35%;
+  height: 20%;
   box-shadow: 0px 11px 11px -4px rgba(0, 0, 0, 0.25) inset;
 }
 
@@ -188,7 +217,7 @@ section:last-of-type {
 .contact-inner {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 20px;
 }
 
 .contact-inner a {
@@ -201,8 +230,11 @@ section:last-of-type {
 }
 .call-to-action {
   display: flex;
-  gap: 15px;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
   justify-content: center;
+  text-align: center;
 }
 
 .call-to-action i {
@@ -218,7 +250,7 @@ section:last-of-type {
   flex-direction: column;
   gap: 20px;
   background-color: var(--color-light-grey);
-  padding: 15px;
+  padding: 20px;
 }
 .what-i-do .pricing {
   background-color: var(--color-warm-blue);
@@ -229,6 +261,7 @@ section:last-of-type {
 
 .what-i-do h2 {
   color: var(--color-green);
+  margin-bottom: 0;
 }
 
 .what-i-do {
@@ -239,7 +272,6 @@ section:last-of-type {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding: 25px;
 }
 
 .sidenote {
@@ -247,7 +279,7 @@ section:last-of-type {
   display: block;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .logo-wrapper {
     margin-left: 0;
   }
@@ -255,6 +287,25 @@ section:last-of-type {
     flex-direction: row;
   }
   .left-wrapper {
-    width: 450px;
+    width: 400px;
+  }
+  .right {
+    padding-top: 40px;
+  }
+  h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .call-to-action {
+    flex-direction: row;
+  }
+  .right .call-to-action {
+    justify-content: left;
+  }
+  .right-title {
+    display: block;
+  }
+  .work-title {
+    display: none;
   }
 }
