@@ -1,13 +1,12 @@
 :root {
   --color-black: rgb(66 66 66 / 1);
-  --color-dark-grey: #2e2e2c;
+  --color-dark-grey: #03191e;
   --color-warm-white: rgba(253, 253, 255, 1);
-  --color-purple: #5f539e;
-  --color-dark-purple: #31295b;
+  --color-purple: #439775;
   --color-yellow: #fac05e;
   --color-light-grey: #bac1b8;
-  --color-warm-blue:#58a4b0;
-  --color-green:#0c7c59;
+  --color-warm-blue: #58a4b0;
+  --color-green: #0c7c59;
 }
 
 * {
@@ -35,6 +34,21 @@ li {
 
 .right h2 {
   margin-bottom: 15px;
+}
+
+.btn {
+  background-color: var(--color-yellow);
+  padding: 8px 15px;
+  border-radius: 8px;
+  color: var(--color-black);
+  text-decoration: none;
+  transition: color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
+  text-transform: uppercase;
+}
+.btn:hover {
+  background-color: #58a4b0;
+  color: var(--color-warm-white);
 }
 
 body {
@@ -156,6 +170,8 @@ header img {
   position: relative;
   padding-bottom: 25px;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 .contact::after {
   content: "";
@@ -170,19 +186,60 @@ header img {
   box-shadow: 0px 11px 11px -4px rgba(0, 0, 0, 0.25) inset;
 }
 
+section:last-of-type {
+  padding-bottom: 50px;
+}
+
+.contact-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-inner a {
+  color: var(--color-yellow);
+}
+
+.contact-inner i {
+  color: var(--color-yellow);
+  margin-right: 8px;
+}
+.call-to-action {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.call-to-action i {
+  margin-right: 8px;
+  color: var(--color-black);
+}
+.call-to-action a {
+  color: var(--color-black);
+}
+
 .what-i-do {
   display: flex;
   flex-direction: column;
   gap: 20px;
   background-color: var(--color-light-grey);
-  border-radius: 8px;
   padding: 15px;
 }
 .what-i-do .pricing {
   background-color: var(--color-warm-blue);
   padding: 15px;
   border-radius: 8px;
+  color: var(--color-warm-white);
 }
+
+.what-i-do h2 {
+  color: var(--color-green);
+}
+
+.what-i-do {
+  color: var(--color-black);
+}
+
 .right {
   display: flex;
   flex-direction: column;
