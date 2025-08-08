@@ -65,28 +65,22 @@ body {
 
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/pest-control.jpg");
-  /* height: 70vh; */
-  height: 24vh;
+  height: 27vh;
   transition: height 2s ease;
   overflow: hidden;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-header img {
-  width: 300px;
+header img.logo {
+  width: 276px;
   height: auto;
   position: absolute;
   z-index: 1;
-  left: calc(50% - 150px);
+  left: calc(50% - 138px);
   top: 0;
 }
-.logo-text {
-  position: absolute;
-  z-index: 1;
-  left: calc(50% - 150px);
-  top: calc(100% - 80%);
-}
+
 .container {
   max-width: 1300px;
   margin-left: auto;
@@ -96,7 +90,7 @@ header img {
 }
 .logo-wrapper {
   max-width: 450px;
-  height: 196px;
+  height: 225px;
   position: relative;
   overflow: hidden;
   margin-left: auto;
@@ -110,7 +104,7 @@ header img {
   bottom: 0;
   left: calc(50% - 65px);
   border-radius: 60px 60px 0 0;
-  box-shadow: 45px 0px 0 230px var(--color-purple);
+  box-shadow: 45px 0px 0 245px var(--color-warm-white);
 }
 .main-content {
   max-width: 1300px;
@@ -144,6 +138,7 @@ header img {
 .work::before {
   content: "";
   position: absolute;
+  z-index: 1;
   top: -83px;
   left: calc(50% - 65px);
   width: 130px;
