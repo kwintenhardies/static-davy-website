@@ -80,21 +80,13 @@ body {
 }
 
 header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/davy_mathys_als_wespenverdelger.jpg");
-  height: 263px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/davy_mathys_als_wespenverdelger.jpg");
+  height: 166px;
   transition: height 2s ease;
   overflow: hidden;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-header img.logo {
-  width: 276px;
-  height: auto;
-  position: absolute;
-  z-index: 1;
-  left: calc(50% - 138px);
-  top: 0;
 }
 
 strong {
@@ -113,8 +105,8 @@ h2 {
 }
 
 .logo-wrapper {
-  max-width: 400px;
-  height: 225px;
+  width: 100%;
+  height: 130px;
   position: relative;
   overflow: hidden;
   margin-left: auto;
@@ -128,8 +120,24 @@ h2 {
   bottom: 0;
   left: calc(50% - 65px);
   border-radius: 60px 60px 0 0;
-  box-shadow: 45px 0px 0 245px var(--color-purple);
+  box-shadow: 45px 0px 0 1000px var(--color-purple);
 }
+
+.align-logo-letter {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+header img.logo {
+  width: 130px;
+  height: auto;
+}
+
 .main-content {
   max-width: 1300px;
   padding-left: 25px;
@@ -291,7 +299,6 @@ footer {
   gap: 20px;
 }
 .socials .follow-me {
-  /* display: none; */
   color: var(--color-black);
 }
 .socials a {
@@ -311,7 +318,23 @@ footer {
 @media (min-width: 900px) {
   .logo-wrapper {
     margin-left: 0;
+    max-width: 400px;
+    height: 225px;
   }
+
+  .logo-wrapper::after {
+    box-shadow: 45px 0px 0 245px var(--color-purple);
+  }
+
+  header {
+    height: 263px;
+  }
+
+  header img.logo {
+    width: 276px;
+    height: auto;
+  }
+
   .main-content {
     flex-direction: row;
   }
