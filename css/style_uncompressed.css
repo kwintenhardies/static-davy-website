@@ -321,11 +321,6 @@ footer {
     max-width: 400px;
     height: 225px;
   }
-
-  .logo-wrapper::after {
-    box-shadow: 45px 0px 0 245px var(--color-purple);
-  }
-
   header {
     height: 263px;
   }
